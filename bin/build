@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+root_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+source $root_dir/bin/helpers
+
+major_version=3
+minor_version=4
+
+echo "Starting building MongoShell (${major_version}.${minor_version}) Docker image"
+execute_in_dir "$root_dir" "docker build \
+  -t samsao/mongo-shell:${major_version} \
+  -t samsao/mongo-shell:${major_version}.${minor_version} \
+  .
+"
