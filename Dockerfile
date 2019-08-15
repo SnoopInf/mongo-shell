@@ -6,7 +6,7 @@
 # so intermediate layers can be re-used.
 
 FROM debian:jessie-slim
-LABEL maintainer="mvachon@samsao.co"
+LABEL maintainer="snoopinf@gmail.com"
 
 COPY mongo_launch.sh /usr/bin/mongo_launch
 
